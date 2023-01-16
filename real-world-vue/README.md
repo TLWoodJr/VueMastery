@@ -3,8 +3,9 @@
 Real World Vue  
 Touring Vue Router
 
-#Hosted By render
+# Hosted By render
 
+You can view this repo in action here
 https://basic-event-list-webapp.onrender.com/
 
 # real-world-vue
