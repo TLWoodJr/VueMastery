@@ -3,7 +3,7 @@ Personal Folder for Vue Mastery Projects
 
 # Links to completed courses and projects
 
-The Events Project: https://basic-event-list-webapp.onrender.com/
+The Events Project: https://basic-event-list-webapp.onrender.com
 
  - Real-World-Vue3 (composition API)
 
