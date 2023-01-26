@@ -1,11 +1,17 @@
 <script setup>
+import { inject } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+
+const GStore = inject('GStore');
 </script>
 
 <template>
   <div id="layout">
     <header>
       <div class="wrapper">
+        <div id="flashMessage" v-if="GStore.flashMessage">
+          {{ GStore.flashMessage }}
+        </div>
         <nav>
           <RouterLink :to="{ name: 'event-list' }">Events</RouterLink> |
           <RouterLink :to="{ name: 'about' }">About</RouterLink>
@@ -36,5 +42,19 @@ nav a.router-link-exact-active {
 }
 h2 {
   font-size: 20px;
+}
+
+@keyframes yellowfade {
+  from {
+    background: yellow;
+  }
+  to {
+    background: transparent;
+  }
+}
+
+#flashMessage {
+  animation-name: yellowfade;
+  animation-duration: 3s;
 }
 </style>
