@@ -8,6 +8,7 @@ import NotFound from '../views/NotFound.vue'
 import NetworkError from '../views/NetworkError.vue'
 import nProgress from 'nprogress'
 import EventService from '../services/EventService';
+import EventCreate from '../views/EventCreate.vue'
 import GStore from '../stores/index'
 
 const router = createRouter({
@@ -18,6 +19,11 @@ const router = createRouter({
       name: 'event-list',
       component: EventListView,
       props: route => ({ page: parseInt(route.query.page) || 1})
+    },
+    {
+      path:'/create',
+      name:'event-create',
+      component: EventCreate
     },
     {
       path: '/events/:id',
